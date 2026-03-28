@@ -66,7 +66,45 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
-	
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	</canvas>
+<div style="text-align:center;">
+    <button onclick="drawRect()">Draw Rectangle</button>
+    <button onclick="writeName()">Write Name</button>
+    <button onclick="loadImage()">Load Image</button>
+    <button onclick="clearCanvas()">Clear Canvas</button>
+</div>
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function drawRect() {
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 100);
+    }
+
+    function writeName() {
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "red";
+        ctx.fillText("Chris", 120, 200);
+    }
+
+    function loadImage() {
+        const img = new Image();
+        img.src = "https://picsum.photos/200"; // placeholder image
+        img.onload = () => {
+            ctx.drawImage(img, 100, 50, 150, 150);
+        };
+    }
+
+    function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+</script>
+
+
+
+
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
 		
