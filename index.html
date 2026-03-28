@@ -24,10 +24,10 @@ blah, blah, blah, blah
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
+	<!-- makes the layout accessible through phone -->
    <head> 
       <title>App6---HTML5-Canvas</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">  
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
@@ -41,7 +41,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </script>
 
 
-
+<!-- modifies the text to a style -->
 <style>	
 .body {
      margin: 0em;
@@ -58,8 +58,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 }
   .page:target {
     left: 0vw;
-    z-index: 1;
-}
+    z-index: 1; 
+} 
 </style>
 
 <body>
@@ -68,34 +68,34 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">	</canvas>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">	</canvas> <!-- makes the border outline and styles the border -->
 <div style="text-align:center;">
-    <button onclick="Rectangle()">Draw Rectangle</button>
-    <button onclick="Name()">Write Name</button>
-    <button onclick="image()">Load Image</button>
-    <button onclick="canvas()">Clear Canvas</button>
-	<img id="scream" src="https://www.w3schools.com/html/img_the_scream.jpg" style="display:none;">
+    <button onclick="Rectangle()">Draw Rectangle</button> <!-- makes the button for Rectangle and when clicked calls for the function-->
+    <button onclick="Name()">Write Name</button> <!-- makes the button for name and when clicked calls for the function-->
+    <button onclick="image()">Load Image</button> <!-- makes the button for loading Image and when clicked calls for the function-->
+    <button onclick="canvas()">Clear Canvas</button> <!-- makes the button for clearing the canvas and when clicked calls for the function-->
+	<img id="scream" src="https://www.w3schools.com/html/img_the_scream.jpg" style="display:none;"> <!-- creates an element to call later when clicked the image button. --> 
 </div>
 <script>
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
+    var c = document.getElementById("myCanvas"); // JavaScript that makes a variable called c that stores canvas element. 
+    var ctx = c.getContext("2d"); // JavaScript that makes a variable called ctx that gets the 2d drawing. 
 
-    function Rectangle() {
-        ctx.strokeRect(20, 20, 80, 50);
+    function Rectangle() { //makes a function named Rectangle
+        ctx.strokeRect(20, 20, 80, 50); //creates an outline for the rectangle 
+} 
+
+    function Name() { //makes a function named Name
+        ctx.font = "20px Arial"; // tells the size and the style
+        ctx.fillText("Chris", 60, 90); //tells what to put and where to put it
 }
 
-    function Name() {
-        ctx.font = "20px Arial";
-        ctx.fillText("Chris", 60, 90);
-}
+    function image() { //makes a function named image
+        var img = document.getElementById("scream"); //makes id scream that was stored before happen through the help of the function.
+            ctx.drawImage(img, 10,10); //tells where to draw the image
+} 
 
-    function image() {
-        var img = document.getElementById("scream");
-            ctx.drawImage(img, 10,10);
-}
-
-    function canvas() {
-        ctx.clearRect(0, 0, c.width, c.height);
+    function canvas() { ////makes a function named canvas
+        ctx.clearRect(0, 0, c.width, c.height); //clears the entire canvas
 }
 </script></p>
 		
@@ -109,3 +109,6 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 </body>
 </html>
+
+<!-- This code was made through the W3school and corrections from Gemini.
+
