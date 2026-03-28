@@ -70,32 +70,32 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <div id="content" class="w3-container">
 	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">	</canvas>
 <div style="text-align:center;">
-    <button onclick="drawRect()">Draw Rectangle</button>
-    <button onclick="writeName()">Write Name</button>
-    <button onclick="loadImage()">Load Image</button>
-    <button onclick="clearCanvas()">Clear Canvas</button>
+    <button onclick="Rectangle()">Draw Rectangle</button>
+    <button onclick="Name()">Write Name</button>
+    <button onclick="image()">Load Image</button>
+    <button onclick="canvas()">Clear Canvas</button>
 </div>
 <script>
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    function drawRect() {
-        ctx.fillRect(20, 20, 80, 50);
+    function Rectangle() {
+        ctx.strokeRect(20, 20, 80, 50);
     }
 
-    function writeName() {
+    function Name() {
         ctx.font = "20px Arial";
         ctx.fillText("Chris", 60, 90);
     }
 
-    function loadImage() {
-        var img = document.getElementById("scream");
+    function image() {
+        var img = document.getElementById("https://fri.cns.utexas.edu/research-streams/diy-diagnostics");
             ctx.drawImage(img, 10,10);
         };
     }
 
-    function clearCanvas() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function canvas() {
+        ctx.clearRect(0, 0, c.width, c.height);
     }
 </script></p>
 		
